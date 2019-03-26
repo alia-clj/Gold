@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/mojing/mojing",
+    "pages/qiandao/qiandao",
+    "pages/my/my"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "GOD RESEARCH INSTITUTION",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#757575",
+    "selectedColor": "#000000",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "pages/image/shouye1.png",
+        "iconPath": "pages/image/shouye.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "pages/image/qiandao1.png",
+        "iconPath": "pages/image/qiandao.png",
+        "pagePath": "pages/qiandao/qiandao",
+        "text": "签到"
+      },
+      {
+        "selectedIconPath": "pages/image/mojing1.png",
+        "iconPath": "pages/image/mojing.png",
+        "pagePath": "pages/mojing/mojing",
+        "text": "魔镜"
+      },
+      {
+        "selectedIconPath": "pages/image/my1.png",
+        "iconPath": "pages/image/my.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  }
+}

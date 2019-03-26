@@ -1,0 +1,58 @@
+<!--index.wxml-->
+<view class="container">
+  <swiper autoplay="{{false}}" previous-margin="{{'100rpx'}}" next-margin="{{'100rpx'}}" bindchange="swiperChange" style='margin-top:40rpx'>
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item width='612'>
+        <image src="{{item}}" class="slide-image {{swiperIndex == index ? 'active' : ''}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class='content-box' >
+      <block wx:for="{{imgUrl1}}" wx:key="{{imgUrl1}}">
+        <image src="{{item}}"  class='box2-img-box' style='transform:scale(0.92)'> </image>
+    </block>
+  </view>
+
+  <view class='jifenredui'>
+    <text class='title'>积分热兑</text>
+    <view>
+      <swiper class='content-box'  next-margin="{{'80rpx'}}">
+        <block wx:for="{{imgUrl2}}" wx:key="{{imgUrl2}}">
+          <swiper-item class='jifenredui-img-box'>
+            <image src="{{item}}"> </image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+
+  <view class='jifenniaosha'>
+    <view class='title' style='background:#A18AFE'>
+      <text>积分秒杀</text>
+      <text class='time-item'>{{time.shi}}</text>
+      <text>:</text>
+      <text class='time-item'>{{time.fen}}</text>
+      <text>:</text>
+      <text class='time-item'>{{time.miao}}</text>
+    </view>
+    <view style='height:351rpx;position:relative'>
+      <image src='../image/5.png' style='width:200rpx;height:196rpx;margin-left:100rpx;margin-top:60rpx'></image>
+      <text style='position:absolute;left:370rpx;top:96rpx;font-size:30rpx;color:#000000'>潘达水光精华面膜</text>
+      <text style='position:absolute;left:370rpx;top:146rpx;font-size:24rpx;color#bebebe'>补水保湿清洁毛孔提亮肤色</text>
+      <text style='position:absolute;left:370rpx;top:186rpx;width:200rpx;height:60rpx;background:#FF6C44;color:#fff;text-align:center;line-height:60rpx;font-size:30rpx'>99积分
+      </text>
+    </view>
+  </view>
+
+  <view style='width:100%;height:60rpx;text-align:center;'>
+    <text style='line-height:60rpx;color:#ffffff;font-size:40rpx;'>免费领取</text>
+  </view>
+
+  <view class='img-box' wx:for="{{bigImgUrl1}}" wx:key="{{index}}">
+    <image src='{{item.img}}' style='transform:scale(1)'></image>
+    <text class='img-box-title'>{{item.title}}</text>
+    <text class='img-box-desc'>{{item.desc}}</text>
+  </view>
+
+</view>
