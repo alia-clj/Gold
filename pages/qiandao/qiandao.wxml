@@ -1,2 +1,179 @@
-<!--pages/qiandao/qiandao.wxml-->
-<text>pages/qiandao/qiandao.wxml  签到？签到？在哪签到？</text>
+<view class='fixed-box' style='z-index:2'>
+  <p class='testResult'> 签到有礼 </p>
+  <p class='testResult'> 已连续签到{{ day }}天 </p>
+
+
+  <div class='seeReport' wx:if="{{day<1}}"> 签到 </div>
+   <div class='baocun'   style="z-index:9999">今日已签</div>
+  <div class='hupeng' bindtap="goBag"  style="z-index:9999">我的背包</div>
+
+
+  <div style='text-align:center;margin-top:300rpx' bindtap="mianmojing">面膜经 </div>
+  <div style='text-align:center;' bindtap="jinghuayao">精华要 </div>
+  <div style='text-align:center;' bindtap="shuiruguai">水乳怪 </div>
+  <div style='text-align:center;' bindtap="yanjingmo">眼睛莫 </div>
+  <div style='text-align:center;' bindtap="yanjingshuang">捕获眼霜精一对 </div>
+  <div style='text-align:center;' bindtap="jiemianjing">洁面精 </div>
+  <div style='text-align:center;' bindtap="hecheng">合成 </div>
+  <div style='text-align:center;' bindtap="choujiangjifen">抽奖的积分 </div>   
+  <div style='text-align:center;' bindtap="choujiangyouhuiquan">抽奖得优惠券 </div>   
+</view>
+
+<image src='../image/qiandao/bgup.png' style='width:94%;height:730rpx;position:fixed;top:240rpx;right:0;z-index:9'></image>
+<image class='fixed-box' src='../image/qiandao/Sign-in-background.png'></image>
+  <ul class='qiandao-box' style="">
+    <li  class='{{ day < 2 ? "active":"actived"}}' >  DAY <span> 1 </span> </li>
+    <li  class='{{ day < 3 ? "active":"actived"}}' >  DAY <span> 2 </span></li>
+    <li  class='{{ day < 4 ? "active":"actived"}}' style='margin-top:0'>  DAY <span> 3 </span></li>
+    <li  class='{{ day < 5 ? "active":"actived"}}' style='margin-top:0' >  DAY <span> 4 </span></li>
+
+  </ul>
+
+<!-- 弹框内容 -->
+<view class="modal-mask" bindtap="hideModal" wx:if="{{showModal}}"></view>
+<!-- 首次进入页面弹框内容 -->
+<view wx:if="{{shoucijinru}}">
+  <view class="modal-content" wx:if="{{shoucijinru}}" style='padding:0;'>
+    <view class='modal-content-box' style='background:#ffffff;height:560rpx;border-radius:20rpx;top:20%'>
+      <image class='modal-img' style='width:300rpx;height:200rpx;top:120rpx;left:calc(50% - 150rpx);' src='../image/qiandao/1.png'></image>
+      <p class='modal-p' style='font-size:38rpx;font-weight:bold;margin-top:150rpx'>每日签到</p>
+      <p class='modal-p' style='font-size:30rpx;margin:10rpx;;font-weight:bold'>每日签到即可得一张护肤品成精卡</p>
+      <p class='modal-p' style='font-size:30rpx;margin:10rpx 40rpx;text-align:left'>集齐四张卡片可立即前往我的背包 合成即可奖，抽奖礼品可获得优惠 券或者积分</p>
+      <p class='modal-p' style='font-size:36rpx;color:#ffffff;background:#6151F0;width:400rpx;height:60rpx;line-height:60rpx;margin:40rpx auto' bindtap='closeModal'>收下</p>
+    </view>
+  </view>
+</view>
+<image bindtap='closeModal' wx:if="{{shoucijinru}}" style='position:fixed;bottom:200rpx;left:calc(50% - 30rpx);z-index:9999;width:60rpx;height:60rpx' src='../image/magicmirror/close.png'></image>
+
+
+<!-- 面膜精 -->
+<view wx:if="{{mianmojing}}">
+  <view class="modal-content" wx:if="{{mianmojing}}" style='padding:0;'>
+    <view class='modal-content-box' style='border-radius:20rpx;top:20%'>
+      <image class='modal-img' style='width:300rpx;height:80rpx;top:120rpx;left:calc(50% - 150rpx);' src='../image/qiandao/恭喜你.png'></image>
+      <image class='modal-img' style='width:500rpx;height:500rpx;top:340rpx;left:calc(50% - 250rpx);' src='../image/qiandao/modal2.png'></image>
+      <p class='modal-p' style='font-size:38rpx;font-weight:bold;margin-top:0;color:#ffffff'>捕获面膜精一只</p>
+    </view>
+  </view>
+  </view>
+  <p class='modal-p' style='font-size:36rpx;color:#ffffff;background:#6151F0;width:300rpx;height:60rpx;position:fixed;bottom:200rpx;line-height:60rpx;left:calc(50% - 150rpx);z-index:99999;' bindtap='closeModal' wx:if="{{mianmojing}}">收下</p>
+
+
+<!-- 精华妖 -->
+<view wx:if="{{jinghuayao}}">
+  <view class="modal-content" wx:if="{{jinghuayao}}" style='padding:0;'>
+    <view class='modal-content-box' style='border-radius:20rpx;top:20%'>
+      <image class='modal-img' style='width:300rpx;height:80rpx;top:120rpx;left:calc(50% - 150rpx);' src='../image/qiandao/恭喜你.png'></image>
+      <image class='modal-img' style='width:500rpx;height:500rpx;top:340rpx;left:calc(50% - 250rpx);' src='../image/qiandao/modal3.png'></image>
+      <p class='modal-p' style='font-size:38rpx;font-weight:bold;margin-top:0;color:#ffffff'>捕获精华妖一只</p>
+    </view>
+  </view>
+  </view>
+  <p class='modal-p' style='font-size:36rpx;color:#ffffff;background:#6151F0;width:300rpx;height:60rpx;position:fixed;bottom:200rpx;line-height:60rpx;left:calc(50% - 150rpx);z-index:99999;' bindtap='closeModal' wx:if="{{jinghuayao}}">收下</p>
+
+
+
+
+<!-- 捕获水乳怪一对 -->
+<view wx:if="{{shuiruguai}}">
+  <view class="modal-content" wx:if="{{shuiruguai}}" style='padding:0;'>
+    <view class='modal-content-box' style='border-radius:20rpx;top:20%'>
+      <image class='modal-img' style='width:300rpx;height:80rpx;top:120rpx;left:calc(50% - 150rpx);' src='../image/qiandao/恭喜你.png'></image>
+      <image class='modal-img' style='width:500rpx;height:500rpx;top:340rpx;left:calc(50% - 250rpx);' src='../image/qiandao/modal4.png'></image>
+      <p class='modal-p' style='font-size:38rpx;font-weight:bold;margin-top:0;color:#ffffff'>捕获水乳怪一对</p>
+    </view>
+  </view>
+  </view>
+  <p class='modal-p' style='font-size:36rpx;color:#ffffff;background:#6151F0;width:300rpx;height:60rpx;position:fixed;bottom:200rpx;line-height:60rpx;left:calc(50% - 150rpx);z-index:99999;' bindtap='closeModal' wx:if="{{shuiruguai}}">收下</p>
+
+
+
+
+<!-- 捕获眼膜精一只 -->
+<view wx:if="{{yanjingmo}}">
+  <view class="modal-content" wx:if="{{yanjingmo}}" style='padding:0;'>
+    <view class='modal-content-box' style='border-radius:20rpx;top:20%'>
+      <image class='modal-img' style='width:300rpx;height:80rpx;top:120rpx;left:calc(50% - 150rpx);' src='../image/qiandao/恭喜你.png'></image>
+      <image class='modal-img' style='width:500rpx;height:500rpx;top:340rpx;left:calc(50% - 250rpx);' src='../image/qiandao/modal5.png'></image>
+      <p class='modal-p' style='font-size:38rpx;font-weight:bold;margin-top:0;color:#ffffff'>捕获眼膜精一只</p>
+    </view>
+  </view>
+  </view>
+  <p class='modal-p' style='font-size:36rpx;color:#ffffff;background:#6151F0;width:300rpx;height:60rpx;position:fixed;bottom:200rpx;line-height:60rpx;left:calc(50% - 150rpx);z-index:99999;' bindtap='closeModal' wx:if="{{yanjingmo}}">收下</p>
+
+<!-- 捕获眼霜精一对 -->
+<view wx:if="{{yanjingshuang}}">
+  <view class="modal-content" wx:if="{{yanjingshuang}}" style='padding:0;'>
+    <view class='modal-content-box' style='border-radius:20rpx;top:20%'>
+      <image class='modal-img' style='width:300rpx;height:80rpx;top:120rpx;left:calc(50% - 150rpx);' src='../image/qiandao/恭喜你.png'></image>
+      <image class='modal-img' style='width:500rpx;height:500rpx;top:340rpx;left:calc(50% - 250rpx);' src='../image/qiandao/modal6.png'></image>
+      <p class='modal-p' style='font-size:38rpx;font-weight:bold;margin-top:0;color:#ffffff'>捕获眼精霜一只</p>
+    </view>
+  </view>
+  </view>
+  <p class='modal-p' style='font-size:36rpx;color:#ffffff;background:#6151F0;width:300rpx;height:60rpx;position:fixed;bottom:200rpx;line-height:60rpx;left:calc(50% - 150rpx);z-index:99999;' bindtap='closeModal' wx:if="{{yanjingshuang}}">收下</p>
+
+<!-- 捕获洁面精一只 -->
+<view wx:if="{{jiemianjing}}">
+  <view class="modal-content" wx:if="{{jiemianjing}}" style='padding:0;'>
+    <view class='modal-content-box' style='border-radius:20rpx;top:20%'>
+      <image class='modal-img' style='width:300rpx;height:80rpx;top:120rpx;left:calc(50% - 150rpx);' src='../image/qiandao/恭喜你.png'></image>
+      <image class='modal-img' style='width:500rpx;height:500rpx;top:340rpx;left:calc(50% - 250rpx);' src='../image/qiandao/modal7.png'></image>
+      <p class='modal-p' style='font-size:38rpx;font-weight:bold;margin-top:0;color:#ffffff'>捕获洁面精一只</p>
+    </view>
+  </view>
+  </view>
+  <p class='modal-p' style='font-size:36rpx;color:#ffffff;background:#6151F0;width:300rpx;height:60rpx;position:fixed;bottom:200rpx;line-height:60rpx;left:calc(50% - 150rpx);z-index:99999;' bindtap='closeModal' wx:if="{{jiemianjing}}">收下</p>
+
+  <!-- 合成 -->
+  <view wx:if="{{hecheng}}">
+  <view class="modal-content" wx:if="{{hecheng}}" style='padding:0;'>
+    <view class='modal-content-box' style='border-radius:20rpx;top:20%'>
+      <image class='modal-img' style='width:260rpx;height:60rpx;top:120rpx;left:calc(50% - 130rpx);' src='../image/qiandao/已合成.png'></image>
+      <image class='modal-img' style='width:500rpx;height:500rpx;top:260rpx;left:calc(50% - 250rpx);' src='../image/qiandao/modal8.png'></image>
+    </view>
+  </view>
+  </view>
+  <p class='modal-p' style='font-size:36rpx;color:#ffffff;background:#6151F0;width:300rpx;height:60rpx;position:fixed;bottom:200rpx;line-height:60rpx;left:calc(50% - 150rpx);z-index:99999;' bindtap='closeModal' wx:if="{{hecheng}}">去抽奖</p>
+
+<!-- 抽奖的积分 -->
+  <view wx:if="{{choujiangjifen}}">
+  <view class="modal-content" wx:if="{{choujiangjifen}}" style='padding:0;'>
+    <view class='modal-content-box' style='border-radius:20rpx;top:20%'>
+      <image class='modal-img' style='width:260rpx;height:60rpx;top:120rpx;left:calc(50% - 130rpx);' src='../image/qiandao/恭喜你.png'></image>
+      <image class='modal-img' style='width:600rpx;height:400rpx;top:260rpx;left:calc(50% - 300rpx);z-index:9999' src='../image/qiandao/111.png'></image>
+      <p class='modal-p' style='font-size:40rpx;color:#000000;width:300rpx;height:60rpx;position:fixed;top:300rpx;line-height:60rpx;left:calc(50% - 150rpx);z-index:99999;' bindtap='closeModal' wx:if="{{choujiangjifen}}">获得200积分</p>
+       <image class='modal-img' style='width:600rpx;height:260rpx;top:360rpx;left:calc(50% - 300rpx);z-index:19998' src='../image/qiandao/jifen.png'></image>
+         <p class='modal-p' style='font-size:64rpx;color:#ffffff;width:300rpx;height:60rpx;position:fixed;top:456rpx;line-height:60rpx;left:calc(50% - 100rpx);z-index:99999;' bindtap='closeModal' wx:if="{{choujiangjifen}}">200积分</p>
+    </view>
+  </view>
+  </view>
+  <p class='modal-p' style='font-size:36rpx;color:#ffffff;background:#6151F0;width:300rpx;height:60rpx;position:fixed;bottom:320rpx;line-height:60rpx;left:calc(50% - 150rpx);z-index:99999;' bindtap='closeModal' wx:if="{{choujiangjifen}}">查看积分</p>
+  <image bindtap='closeModal' wx:if="{{choujiangjifen}}" style='position:fixed;bottom: 200rpx;left:calc(50% - 30rpx);z-index:9999;width:60rpx;height:60rpx' src='../image/magicmirror/close.png'></image>
+
+
+<!-- 抽奖得优惠券 -->
+    <view wx:if="{{choujiangyouhuiquan}}">
+  <view class="modal-content" wx:if="{{choujiangyouhuiquan}}" style='padding:0;'>
+    <view class='modal-content-box' style='border-radius:20rpx;top:20%'>
+      <image class='modal-img' style='width:260rpx;height:60rpx;top:120rpx;left:calc(50% - 130rpx);' src='../image/qiandao/恭喜你.png'></image>
+      <image class='modal-img' style='width:600rpx;height:440rpx;top:260rpx;left:calc(50% - 300rpx);z-index:9999' src='../image/qiandao/111.png'></image>
+      <p class='modal-p' style='font-size:40rpx;color:#000000;width:300rpx;height:60rpx;position:fixed;top:300rpx;line-height:60rpx;left:calc(50% - 150rpx);z-index:99999;' bindtap='closeModal' wx:if="{{choujiangyouhuiquan}}">获得20元优惠券</p>
+       <image class='modal-img' style='width:600rpx;height:260rpx;top:360rpx;left:calc(50% - 300rpx);z-index:19998' src='../image/qiandao/222.png'></image>
+         <p class='modal-p' style='font-size:64rpx;color:#ffffff;width:600rpx;height:260rpx;position:fixed;top:360rpx;line-height:60rpx;left:calc(50% - 300rpx);z-index:99999;' bindtap='closeModal' wx:if="{{choujiangyouhuiquan}}">
+         <p style='font-size:64rpx;width:220rpx;height:260rpx;line-height:260rpx;float:left'>
+         ￥20
+         </p>
+   <p style='font-size:44rpx;color:#ffffff;width:380rpx;height:260rpx;float:left;text-align:left;text-indent:40rpx'>
+        <p  style='font-size:44rpx;line-height:60rpx;margin-top:40rpx'> 优惠券</p>
+        <p   style='font-size:24rpx;line-height:40rpx'> 满299元使用</p>
+        <p  style='font-size:24rpx;line-height:40rpx'> 限潘达微信商城使用</p>
+        <p  style='font-size:24rpx;line-height:40rpx'> 2019.4.20至2019.5.5</p>
+
+         </p>
+         </p>
+    </view>
+  </view>
+  </view>
+  <p class='modal-p' style='font-size:36rpx;color:#ffffff;background:#6151F0;width:300rpx;height:60rpx;position:fixed;bottom:320rpx;line-height:60rpx;left:calc(50% - 150rpx);z-index:99999;' bindtap='closeModal' wx:if="{{choujiangyouhuiquan}}">查看我的优惠券</p>
+  <image bindtap='closeModal' wx:if="{{choujiangyouhuiquan}}" style='position:fixed;bottom: 200rpx;left:calc(50% - 30rpx);z-index:9999;width:60rpx;height:60rpx' src='../image/magicmirror/close.png'></image>

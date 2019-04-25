@@ -1,0 +1,18 @@
+<!--pages/myGrade/myGrade.wxml-->
+<view>
+  <div class='grade-bg'>
+    <image src='../image/center/money.png'></image>
+    <span> {{ grade }} </span>
+  </div>
+  <div class='recomend-products' style='color:#000000'>
+    推荐产品
+  </div>
+    <div class='recomend-products-box-radar'  wx:for="{{recommendItem}}" wx:key="{{index}}">
+          <image src="{{item.productsImg}}"></image>
+          <div>
+            <p> {{item.product}}</p>
+            <p> {{item.productDesc}} </p>
+            <p style='color:#E41616'> {{item.price}}</p>
+          </div>
+        </div>
+</view>

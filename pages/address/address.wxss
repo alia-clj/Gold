@@ -1,0 +1,48 @@
+/* pages/address/address.wxss */
+.address-box{
+  width: 90%;
+  height: 250rpx;
+  margin: 0 5%;
+  border-bottom: 1px dotted #000000;
+}
+.address-box:nth-last-child(1){
+  border-bottom: none;
+}
+
+.address-box-left{
+  width: calc(100% - 100rpx);
+  float: left;
+  height: 100%;
+}
+.address-box-left>p{
+  text-indent: 40rpx;
+  line-height: 60rpx;
+    color: #000000
+}
+.address-box-left>p:nth-of-type(1){
+  margin-top: 40rpx;
+  font-size: 40rpx;
+
+}
+.address-box-left>p:nth-of-type(2){
+  font-size: 36rpx;
+}.address-box-left>p:nth-of-type(3){
+  font-size: 36rpx;
+  color: #A5A5A5
+}
+
+.address-box-right{
+  width: 60rpx;
+  float: right;
+  height: 60rpx;
+  margin: 90rpx  40rpx 90rpx 0;
+}
+
+.addAddress{
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 40rpx auto;
+  background: #796BF3;
+  text-align: center
+}

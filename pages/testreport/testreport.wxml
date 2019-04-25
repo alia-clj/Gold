@@ -1,0 +1,97 @@
+<!--pages/testreport/testreport.wxml-->
+<image src='../image/magicmirror/magicmirrorbackground.png' style="width:100%;height:100%;position:fixed;top:0;left:0"></image>
+<view style='width:100%;height:100%;position:fixed'>
+  <swiper autoplay="{{false}}" current="{{swiper.current}}" bindchange="swiperChange" style='margin-top:0rpx;width:100%;height:100%;box-sizing:border-box;'>
+    <block wx:for="{{swiper.swiperItem}}" wx:key="{{index}}">
+      <swiper-item>
+        <div class=''>
+          <span class='step-number'> {{item.stepNumber}} </span>
+          <image class='step-img' src="{{item.stepImg}}"></image>
+          <div wx:if="{{item.realImg}}" class='real-img'>
+            <image src="{{item.realImg}}" style='width:100%;height:100%;'></image>
+
+          </div>
+
+          <span class='step-desc'> {{item.stepDesc}} </span>
+        </div>
+        <div class='text-div'>
+          <span></span>
+          <p> 测试结果：{{item.result}} </p>
+          <p> 分析解说：{{item.explain}} </p>
+        </div>
+        <div class='recomend-products'>
+          推荐产品
+        </div>
+        <div class='recomend-products-box'>
+          <image src="{{item.productsImg}}"></image>
+          <div>
+            <p> {{item.product}}</p>
+            <p> {{item.productDesc}} </p>
+            <p>5片装</p>
+          </div>
+        </div>
+      </swiper-item>
+    </block>
+    <!-- <swiper-item>
+        <div class=''>
+          <span class='step-number'> {{stepNumber7}} </span>
+          <image class='step-img' src="{{stepImg7}}"></image>
+          <span class='step-desc'> {{stepDesc7}} </span>
+        </div>
+        <div class='text-div'>
+          <span></span>
+          <p> 测试结果：{{result7}} </p>
+          <p> 分析解说：{{explain7}} </p>
+        </div>
+        <div class='recomend-products'>
+          推荐产品
+        </div>
+        <div class='recomend-products-box'>
+          <image src="{{item.productsImg}}"></image>
+          <div>
+            <p> {{product7}}</p>
+            <p> {{productDesc7}} </p>
+            <p>5片装</p>
+          </div>
+        </div>
+      </swiper-item> -->
+
+
+
+    <swiper-item>
+      <p class='final-report'>最终报告</p>
+      <view class='radarContainer'>
+        <canvas class='radarCanvas' canvas-id='radarCanvas'></canvas>
+      </view>
+      <p class='recomment-friends' style='background-color:#46C4FF'>推荐好友来测试</p>
+      <div class='dingyue'>
+        <div>
+          <p>订阅 FUTURE BOX</p>
+          <p>体验优享价99元/月
+            <span class='yuanjia'> 原价
+              <span style=' text-decoration:line-through;'> 199元/月</span>
+            </span>
+          </p>
+
+        </div>
+        <div> > </div>
+      </div>
+
+      <div class='recomend-products-radar'>
+        推荐产品
+      </div>
+      <div class='recomend-products-box-radar' wx:for="{{recomendProducts}}" wx:key="{{index}}">
+        <image src="{{item.productsImg}}"></image>
+        <div>
+          <p> {{item.product}}</p>
+          <p> {{item.productDesc}} </p>
+          <p>{{item.price}}</p>
+        </div>
+      </div>
+    </swiper-item>
+
+  </swiper>
+  <image src="{{leftArrow}}" bindtap='preBtn' class='changeStep'></image>
+  <image src="{{rightArrow}}" bindtap='nextBtn' class='changeStep'></image>
+
+</view>

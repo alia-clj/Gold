@@ -1,0 +1,11 @@
+<!--pages/qiandao/qiandao.wxml-->
+   <image src='../image/magicmirror/magicmirrorbackground.png' style='width:100%;height:100%;position:fixed'></image>
+
+   <p class='testResult'> {{ testResult }}  </p>
+   <p class='testResult'> {{ testResult1 }}  </p>
+   <p class='testResult'> {{ testResult2 }}  </p>
+
+   <image class='resultImg' src='../image/magicmirror/8.png'></image>
+   <image class='resultImgUp' src='../image/magicmirror/up.png'></image>
+
+  <div class='seeReport'>  查看报告 </div>

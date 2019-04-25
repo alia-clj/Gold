@@ -1,0 +1,142 @@
+/* pages/choujiangji/choujiangji.wxss */
+
+.fixed-box {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.pingshouqi {
+  width: 80%;
+  height: 80rpx;
+  top: 80rpx;
+  position: fixed;
+  left: 10%;
+  z-index: 9;
+}
+
+.testResult {
+  position: fixed;
+  text-align: center;
+  height: 38px;
+  font-family: PingFang-SC-Bold;
+  line-height: 38px;
+  top: 190rpx;
+  font-size: 36rpx;
+  color: #fff;
+  width: 60%;
+  left: 20%;
+  border-radius: 30rpx;
+  background: #ff6f22;
+  z-index: 2;
+}
+
+.choujiang {
+  width: 90%;
+  height: 800rpx;
+  left: 5%;
+  position: fixed;
+  top: 300rpx;
+  z-index: 9;
+}
+
+.go {
+  width: 40%;
+  position: fixed;
+  bottom: 365rpx;
+  height: 120rpx;
+  left: 30%;
+  z-index: 10;
+}
+
+.quan-box {
+  width: 80%;
+  height: 336rpx;
+  background: transparent;
+  /* border: 1px solid black; */
+  overflow: hidden;
+  position: fixed;
+  top: 380rpx;
+  left: 10%;
+  z-index: 19;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 40%;
+}
+
+.right-item {
+  width: 80%;
+  height: 240rpx;
+  margin-top: 40rpx;
+  position: absolute;
+  left: 10%;
+}
+
+.content-item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.avater {
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  left: 0;
+  top: 0;
+}
+
+
+
+
+.youhuquan-center {
+  position: absolute;
+    top: 80rpx;
+  width: 80%;
+  left: 10%;
+}
+
+
+.youhuquan-center-item {
+  height: 300rpx;
+  width: 100%;
+  position: relative;
+}
+
+.youhuquan-center-item>image {
+  height: 100%;
+  width: 100%;
+}
+
+.youhuquan-center-item-left {
+  width: 200rpx;
+  height: 300rrpx;
+  line-height: 230rpx;
+  font-size: 60rpx;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-indent: 40rpx;
+}
+
+.youhuquan-center-item-right {
+  width: calc(100% - 200rpx);
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 20rpx;
+}
+
+.youhuquan-center-item-right>p {
+  font-size: 24rpx;
+  line-height: 36rpx;
+}
+
+.youhuquan-center-item-right>p:nth-of-type(1) {
+  margin-top: 30rpx;
+  font-size: 34rpx;
+}
+

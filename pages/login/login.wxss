@@ -1,0 +1,77 @@
+/* pages/login/login.wxss */
+
+page {
+  font-size: 30rpx;
+}
+
+.home-background {
+  width: 100%;
+  height: 100%;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.info_list {
+  height: 140rpx;
+  line-height: 140rpx;
+  width: 80%;
+  border-bottom: 1px solid #bcbcbd;
+  margin-left: 10%;
+  display: inline-block;
+  font-size: 33rpx;
+  color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.info_list>span {
+  width: 30%;
+  height: 100%;
+  float: left;
+  line-height: 190rpx;
+}
+
+.info_list>input {
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+
+.shouji_info {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 100rpx;
+}
+
+.shouji_info input {
+  margin-top: 25rpx;
+}
+
+.yanzheng_btn {
+  width: 40%;
+  float: left;
+  background: #fff;
+  height: 60rpx;
+  margin-top: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 30rpx;
+  font-size: 26rpx;
+  color: #929fff;
+}
+
+.shouquan_btn{
+  width: 100%;
+  height: 100rpx;
+  line-height:100rpx;
+  background: #FFAC00;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 60rpx;
+}

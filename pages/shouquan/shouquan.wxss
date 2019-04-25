@@ -1,0 +1,26 @@
+.img-box{
+width:400rpx;
+height:400rpx;
+margin-top:100rpx;
+margin-left:calc(50% - 200rpx);
+
+}
+.info_list {
+  height: 140rpx;
+  line-height: 140rpx;
+  width: 80%;
+  margin-left: 10%;
+  display: inline-block;
+  font-size: 33rpx;
+  color: #fff;
+  margin-bottom: 20rpx;
+}
+.shouquan_btn{
+  width: 100%;
+  height: 80rpx;
+  line-height:80rpx;
+  background: #929fff;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 20rpx;
+}

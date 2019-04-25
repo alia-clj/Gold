@@ -1,0 +1,37 @@
+/* pages/myGrade/myGrade.wxss */
+
+.grade-bg {
+  width: 90%;
+  height: 200rpx;
+  margin: 20rpx 5%;
+  background: -webkit-linear-gradient(#ffcd00, #ffb400); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(#ffcd00, #ffb400); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(#ffcd00, #ffb400); /* Firefox 3.6 - 15 */
+  background: linear-gradient(#ffcd00, #ffb400); /* 标准的语法 */
+}
+
+.grade-bg>image {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 50rpx;
+  margin-left: 200rpx;
+  float: left;
+}
+
+.grade-bg>span {
+  float: left;
+  font-size: 50rpx;
+  margin-top: 70rpx;
+}
+
+.recomend-products::after, .recomend-products::before {
+  background: #000;
+}
+
+.recomend-products-box-radar{
+  margin-top: 10rpx
+}
+.recomend-products-box-radar>div>p {
+  color: #000;
+  line-height: 50rpx;
+}

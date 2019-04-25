@@ -1,0 +1,5 @@
+<block wx:for="{{stars}}">
+  <image class="star-image" style="left: {{item*150}}rpx" src="{{key > item ? selectedSrc : normalSrc}}">
+    <view class="item" style="left:75rpx" data-key="{{item+1}}" bindtap="selectRight"></view>
+  </image>
+</block>

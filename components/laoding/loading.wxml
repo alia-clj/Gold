@@ -1,0 +1,6 @@
+<!--components/laoding/loading.wxml-->
+<div class='box'>
+    <div class="loader-37">
+    </div>
+ </div>
+

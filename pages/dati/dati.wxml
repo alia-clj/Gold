@@ -1,0 +1,28 @@
+<!--pages/dati/dati.wxml-->
+<view class='container' style='position:fixed'>
+  <image style='width:80%;height:700rpx;position:fixed;bottom:470rpx;left:10%' src='../image/dati/cicle.png'></image>
+  <div style='width:74%;height:700rpx;position:fixed;bottom:470rpx;left:13%'>
+    <image style='width:30rpx;height:30rpx;position:absolute;left:5%;top:60rpx;' src='../image/dati/pencil.png'></image>
+    <p style='width:80%;position:absolute;left:10%;top:60rpx;font-size:30rpx;color:#ffffff;'>
+      <span>参与答题，通关可申请领取试用装，可增加积分，积分可兑换商品 </span>
+    </p>
+    <image style='width:30rpx;height:30rpx;position:absolute;left:5%;top:200rpx;' src='../image/dati/pencil.png'></image>
+    <p style='width:80%;position:absolute;left:10%;top:200rpx;font-size:30rpx;color:#ffffff;'>
+     每天都可以参加答题，每月都会更新赛季，试用装也会定期上新更换
+    </p>
+    <image style='width:30rpx;height:30rpx;position:absolute;left:5%;top:340rpx;' src='../image/dati/pencil.png'></image>
+    <p style='width:80%;position:absolute;left:10%;top:340rpx;font-size:30rpx;color:#ffffff;'>
+     共有十题每通过一关可以得到相应的积分，但每周的积分不能超过上限
+    </p>
+    <image style='width:30rpx;height:30rpx;position:absolute;left:5%;top:480rpx;' src='../image/dati/pencil.png'></image>
+    <p style='width:80%;position:absolute;left:10%;top:480rpx;font-size:30rpx;color:#ffffff;'>
+      每一题只有10秒的时间哦~
+    </p>
+    <div class='panta' bindtap='panta'> 盘他</div>
+  </div>
+  <image style='width:100%;height:520rpx;position:fixed;bottom:0;left:0' src='../image/dati/9.png'></image>
+</view>
+
+<div class='jidu' style=''>
+  第一赛季
+</div>

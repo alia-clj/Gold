@@ -1,0 +1,26 @@
+<!--pages/shiyongjindu/shiyongjindu.wxml-->
+<view>
+  <div class='youhuquan-top'>
+    <image src='../image/center/bg-circle.png'></image>
+  </div>
+    <div class='youhuquan-center'>
+    <div class='youhuquan-center-item' wx:for="{{ quan }}" wx:key="{{index}}">
+      <div class='youhuquan-center-item-left'>
+       <image src='{{item.imgUrl}}'></image>
+
+      </div>
+      <div class='youhuquan-center-item-right'>
+        <p> {{item.text1}} </p>
+        <p> {{item.text2}} </p>
+        <p> {{item.text3}} </p>
+     
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <div class='youhuquan-no'>
+
+  </div> -->
+
+</view>

@@ -2,9 +2,40 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/mojing/mojing",
+    "pages/magicmirror/magicmirror",
     "pages/qiandao/qiandao",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/testreport/testreport",
+    "pages/secondTestReport/secondtestreport",
+    "pages/reportShare/reportshare",
+    "pages/nochange/nochange",
+    "pages/dati/dati",
+    "pages/shiyong/shiyong",
+    "components/circle/circle",
+    "pages/changeAddress/changeAddress",
+    "pages/gradeSearch/gradeSearch",
+    "pages/myGrade/myGrade",
+    "pages/myCoupon/myCoupon",
+    "pages/address/address",
+    "pages/youhuiquan/youhuiquan",
+    "pages/shiyongjindu/shiyongjindu",
+    "pages/addAddress/addAddress",
+    "pages/noTest/notest",
+    "pages/datiDetail/datiDetail",
+    "pages/modal/modal",
+    "pages/btn/btn",
+    "components/laoding/loading",
+    "pages/secondReportShare/secondReportShare",
+    "pages/login/login",
+    "pages/shiyongModal/shiyongModal",
+    "pages/shiyongreport/shiyongreport",
+    "pages/shouquan/shouquan",
+    "components/changeColor/changeColor",
+    "components/pingfen/pingfen",
+    "pages/mybag/mybag",
+    "pages/choujiangji/choujiangji",
+    "components/gundong/gundong",
+    "components/gundongchoujiang/gundongchoujiang"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -33,7 +64,7 @@
       {
         "selectedIconPath": "pages/image/mojing1.png",
         "iconPath": "pages/image/mojing.png",
-        "pagePath": "pages/mojing/mojing",
+        "pagePath": "pages/magicmirror/magicmirror",
         "text": "魔镜"
       },
       {
@@ -41,7 +72,14 @@
         "iconPath": "pages/image/my.png",
         "pagePath": "pages/my/my",
         "text": "我的"
+      },
+      {
+        "selectedIconPath": "pages/image/my1.png",
+        "iconPath": "pages/image/my.png",
+        "pagePath": "pages/btn/btn",
+        "text": "页面"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

@@ -1,2 +1,45 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml   我是谁  我在哪 我在干什么？？？？？</text>
+
+
+
+<view>
+  <div class='top-box'>
+    <image class='user-img' src='../image/magicmirror/girls.png'></image>
+    <p class='user-name'> {{userName}} </p>
+    <br/>
+    <span class='user-level'> {{userLevel}} </span>
+    <image class='user-vip' src='../image/center/vip.png'></image>
+  </div>
+  <ul class='top-top'> 
+    <li bindtap='gradeShop'>
+      <image src='../image/center/1.png'></image>
+      <p> 积分查询 </p>
+    </li>
+        <li  bindtap='goYouhuiquan'>
+      <image src='../image/center/2.png'></image>
+      <p> 优惠券 </p>
+    </li>
+        <li  bindtap='goJindu'> 
+      <image src='../image/center/3.png'></image>
+      <p> 申请进度 </p>
+    </li>
+  </ul>
+  <ul class='content'>
+    <li bindtap='goAddress'>
+      修改地址
+      <span> > </span>
+    </li>
+    <li bindtap='buyHistory'>
+      修改购买记录地址
+      <span> > </span>
+    </li>
+    <li  bindtap='magicmirrorReport'>
+      魔镜报告
+      <span> > </span>
+    </li>
+    <li bindtap='gradeShop'>
+      积分商城
+      <span> > </span>
+    </li>
+  </ul>
+
+</view>

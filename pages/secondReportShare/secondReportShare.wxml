@@ -1,0 +1,38 @@
+<!--pages/secondReportShare/secondReportShare.wxml-->
+<!--pages/secondTestReport/secondtestreport.wxml-->
+<view>
+   <image src='../image/magicmirror/magicmirrorbackground.png' style='width:100%;height:100%;position:fixed'></image>
+   <image  class='yanzhi'  src='../image/magicmirror/mei.png'></image>
+
+   <image class='girls' src='../image/magicmirror/girls.png'></image>
+   <image class='small-circle' src='../image/magicmirror/xiaoyuan.png'></image>
+   <image class='big-circle' src='../image/magicmirror/dayuan.png'></image>
+
+  <p class='wa' style='top:180rpx'>{{text2}}</p>
+  <p class='wa' style='top:250rpx'>{{text3}}</p>
+
+  <!-- <div class='baocun'  bindtap='save'>保存图片</div> -->
+  <div class='hupeng'>呼朋唤友比颜值</div>
+
+  <div class='footer'>
+       <!-- <image class='girls-bottom' src='../image/magicmirror/girls.png'></image>
+       <span class='user-name'> 娃哈哈十个小的房间  </span>
+       <image class='girls-bottom' style='float:right' src='../image/magicmirror/girls.png'></image> -->
+       <span class='user-name'  style='float:right;width:100rpx;font-size:26rpx'> 长按扫码 或搜索小程序 上帝研究所  </span>
+  </div>
+</view>
+
+   <!-- <image class='resultImg' src='../image/magicmirror/8.png'></image> -->
+   <!-- <image class='resultImgUp' src='../image/magicmirror/up.png'></image> -->
+
+<view class="modal-mask" bindtap="hideModal" wx:if="{{showModal}}"></view>
+<view wx:if="{{showModal}}">
+  <view class="modal-content">
+    <image class='modal-two-girls' src='../image/magicmirror/23.png'></image>  
+    <div class='save-box'>
+     <image class='duigou'  src='../image/magicmirror/duigou.png'></image>
+    <span class='duigou-text' > 已保存到相册 </span>
+    </div> 
+    <image bindtap='hideModal'  class='close' src='../image/magicmirror/close.png'></image>
+  </view>
+</view>

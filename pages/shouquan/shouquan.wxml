@@ -1,0 +1,13 @@
+<view class='shouji_info'>
+  <image class='img-box' src='../image/magicmirror/girls.png'></image>
+
+
+  <view style='margin:80rpx 0 0 0;text-align:center;color:a5a5a5;font-size:28rpx'>申请获取你的公开信息（昵称、头像等）</view>
+  <view class='info_list'>
+    <!-- <p  class='/shouquan_btn'  open-type='getUserInfo' bindgetuserinfo='getUserInfo'> 微信授权 </p> -->
+        <button class='shouquan_btn'  type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+        授权登录
+    </button>
+  </view>
+
+</view>

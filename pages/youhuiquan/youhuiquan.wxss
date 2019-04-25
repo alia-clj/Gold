@@ -1,0 +1,99 @@
+/* pages/youhuiquan/youhuiquan.wxss */
+
+
+.youhuquan-top>image {
+  width: 100%;
+  height: 240rpx;
+}
+
+.youhuquan-center {
+  position: absolute;
+    top: 80rpx;
+  width: 80%;
+  left: 10%;
+}
+
+
+.youhuquan-center-item {
+  height: 300rpx;
+  width: 100%;
+  position: relative;
+}
+
+.youhuquan-center-item>image {
+  height: 100%;
+  width: 100%;
+}
+
+.youhuquan-center-item-left {
+  width: 200rpx;
+  height: 300rrpx;
+  line-height: 300rpx;
+  font-size: 60rpx;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-indent: 40rpx;
+}
+
+.youhuquan-center-item-right {
+  width: calc(100% - 200rpx);
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 20rpx;
+}
+
+.youhuquan-center-item-right>p {
+  font-size: 32rpx;
+  line-height: 50rpx;
+}
+
+.youhuquan-center-item-right>p:nth-of-type(1) {
+  margin-top: 30rpx;
+  font-size: 40rpx;
+}
+
+
+.recomend-products::after, .recomend-products::before {
+  background: #000;
+}
+
+.recomend-products-box-radar{
+  margin-top: 10rpx
+}
+.recomend-products-box-radar>div>p {
+  color: #000;
+  line-height: 50rpx;
+}
+
+.youhuquan-no{
+width:80%;
+height:400rpx;
+background:#ffffff;
+top:100rpx;
+left:10%;
+position:fixed;
+border:1px solid #efefef;
+border-radius:20rpx;
+-moz-box-shadow:0px 0px 6px #5E7A71;
+ -webkit-box-shadow:0px 0px 6px #5E7A71;
+  box-shadow:0px 0px 6px #5E7A71;
+}
+
+.youhuquan-no>image{
+  width:260rpx;
+height:260rpx;
+margin:0 auto;
+margin-left:calc(50% - 130rpx);
+
+}
+
+.youhuquan-no>p{
+  color: #A5A5A5;
+text-align: center;
+font-size: 40rpx;
+line-height: 60rpx;
+margin-top: 36rpx
+}

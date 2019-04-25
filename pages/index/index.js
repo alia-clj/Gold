@@ -5,10 +5,32 @@ const app = getApp()
 Page({
   data: {
     imgUrls: [
-      '../image/dstz.png',
-      '../image/dstz.png',
-      '../image/dstz.png',
-      '../image/dstz.png',
+      {
+       url: '../image/index/dstz.png',
+       title:'大神挑战',
+       desc:'答题赢试用'
+
+      },
+      {
+        url:'../image/index/mflq.png',
+        title: '免费领取',
+        desc: '快来领试用'
+
+      },
+      {
+        url:'../image/index/mjcs.png',
+        title: '魔镜测试',
+        desc: '颜值打几分'
+
+      },
+      {
+        url: '../image/index/kllw.png',
+        title: '快来撩我',
+        desc: '爱我要走心'
+
+      },
+
+
     ],
     indicatorDots: false,
     autoplay: false,
@@ -46,7 +68,8 @@ Page({
         desc: '水光精华胶囊面膜',
         img: '../image/22.png',
       },
-    ]
+    ],
+
   },
 
   swiperChange(e) {
@@ -54,6 +77,26 @@ Page({
     this.setData({
       swiperIndex: e.detail.current
     })
+  },
+  swiperClick: function(e) {
+    console.log(this.data.swiperIndex)
+    if (this.data.swiperIndex === 0) {
+      wx.navigateTo({
+        url: '/pages/dati/dati',
+      })
+    } else if (this.data.swiperIndex === 1) {
+      wx.navigateTo({
+        url: '/pages/shiyong/shiyong',
+      })
+    } else if (this.data.swiperIndex === 2) {
+      wx.navigateTo({
+        url: '/pages/testreport/testreport',
+      })
+    } else if (this.data.swiperIndex === 3) {
+      wx.navigateTo({
+        url: '/pages/shiyong/shiyong',
+      })
+    } 
   },
   //事件处理函数
   bindViewTap: function() {
@@ -81,6 +124,7 @@ Page({
     this.setData({
       duration: e.detail.value
     })
-  }
+  },
+
 
 })

@@ -1,18 +1,118 @@
-// pages/qiandao/qiandao.js
+// pages/dati/dati.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    day:2,
+    showModal:false,
+    shoucijinru:false,
+    mianmojing: false,
+    jinghuayao: false,
+    shuiruguai: false,
+    yanjingmo: false,
+    yanjingshuang:false,
+    jiemianjing:false,
+    hecheng:false,
+    choujiangjifen: false,
+    choujiangyouhuiquan:false,
   },
 
+  toShowModal(e) {
+    this.setData({
+      showModal: true
+    });
+  },
+
+  hideModal() {
+    this.setData({
+      showModal: false,
+      shoucijinru: false,  
+      mianmojing: false,
+      jinghuayao: false,
+      shuiruguai: false,
+      yanjingmo: false,
+      yanjingshuang:false,
+      jiemianjing: false,
+      hecheng: false,
+      choujiangjifen:false,
+      choujiangyouhuiquan: false,
+    });
+  },
+  closeModal() {
+    this.hideModal();
+  },
+  shoucijinru() {
+    this.toShowModal();
+    this.setData({
+      shoucijinru: true
+    });
+  },
+  mianmojing() {
+    this.toShowModal();
+    this.setData({
+      mianmojing: true
+    });
+  },
+  jinghuayao() {
+    this.toShowModal();
+    this.setData({
+      jinghuayao: true
+    });
+  },
+  shuiruguai() {
+    this.toShowModal();
+    this.setData({
+      shuiruguai: true
+    });
+  },
+  yanjingmo() {
+    this.toShowModal();
+    this.setData({
+      yanjingmo: true
+    });
+  },
+  yanjingshuang() {
+    this.toShowModal();
+    this.setData({
+      yanjingshuang: true
+    });
+  },
+  jiemianjing() {
+    this.toShowModal();
+    this.setData({
+      jiemianjing: true
+    });
+  },
+  hecheng() {
+    this.toShowModal();
+    this.setData({
+      hecheng: true
+    });
+  },
+  choujiangjifen() {
+    this.toShowModal();
+    this.setData({
+      choujiangjifen: true
+    });
+  },
+  choujiangyouhuiquan() {
+    this.toShowModal();
+    this.setData({
+      choujiangyouhuiquan: true
+    });
+  },
+  goBag() {
+    wx.navigateTo({
+      url: '/pages/mybag/mybag',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // this.shoucijinru()
   },
 
   /**

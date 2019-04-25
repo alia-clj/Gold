@@ -1,0 +1,26 @@
+/* pages/noTest/notest.wxss */
+
+.no-test-title {
+  color: #a5a5a5;
+  font-size: 50rpx;
+  text-align: center;
+  margin-top: 40rpx;
+}
+
+.no-test-img {
+  width: 80%;
+  height: 600rpx;
+  margin-left: 10%;
+}
+
+.go-test {
+  width: 80%;
+  height: 100rpx;
+  line-height: 100rpx;
+  color: #fff;
+  margin: 40rpx auto;
+  display: block;
+  background: #796bf3;
+  text-align: center;
+  font-size: 42rpx;
+}

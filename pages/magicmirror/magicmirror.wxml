@@ -1,0 +1,69 @@
+<!--pages/magicmirror/magicmirror.wxml-->
+<view class='home-page'>
+  <image class='home-background' src='../image/magicmirror/magicmirrorindexbackground.png' width="100%"></image>
+  <image class='home-background-girl' src='../image/magicmirror/yanzhi.png'></image>
+
+  <button class='home-page-btn' bindtap="btnclick"> 拍摄测试 </button>
+</view>
+
+<!--custom Modal-->
+<view class="modal-mask" bindtap="hideModal" wx:if="{{showModal}}"></view>
+<view wx:if="{{showModal}}">
+  <view class="modal-content">
+    <image class='modal-two-girls' src='../image/magicmirror/modal-two-girls.png'></image>
+    <image class='modal-two-yelow' src='../image/magicmirror/modal-yellow.png'></image>
+    <view class='test-box'>
+      <p class='test-box-p'>经常检测</p>
+      <p class='test-box-p'>关注自己的皮肤变化</p>
+    </view>
+    <button class='know-btn' bindtap="iKnow"> 朕知道了 </button>
+  </view>
+</view>
+
+<view class="modal-mask" bindtap="hideModal" wx:if="{{showModalSecond}}"></view>
+<view wx:if="{{showModalSecond}}">
+  <view class="modal-content">
+    <view class='modal-content-box'>
+      <view class='first-girl'>
+        <image src='../image/magicmirror/modal-girl1.png'></image>
+        <p>拍摄时请摆正脸部</p>
+      </view>
+      <view class='second-girls-box'>
+        <ul style="">
+          <li>
+            <image src='../image/magicmirror/modal-girl1.png'></image>
+            <p>请露出额头</p>
+          </li>
+          <li>
+            <image src='../image/magicmirror/modal-girl1.png'></image>
+            <p>不遮挡脸部</p>
+
+          </li>
+          <li>
+            <image src='../image/magicmirror/modal-girl1.png'></image>
+            <p>不遮挡五官</p>
+          </li>
+        </ul>
+      </view>
+    </view>
+    <p style='width:100%;position:absolute;z-index:99999;font-size:24rpx;bottom:170rpx;display:block;text-align:center;left:0;'> 若想得到专业的测试结果，请尽量卸妆 </p>
+    <button class='know-btn-second' bindtap="iKnowSecond"> 朕知道了 </button>
+  </view>
+</view>
+
+
+
+<view class="modal-mask" bindtap="hideModal" wx:if="{{loading}}"></view>
+<view wx:if="{{loading}}">
+  <view class="modal-content">
+      <div class='box'>
+    <div class="loader-37">
+    </div>
+ </div>
+  </view>
+</view>
+
+
+<!-- loading -->
+
+

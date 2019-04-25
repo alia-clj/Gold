@@ -1,0 +1,19 @@
+<!--pages/qiandao/qiandao.wxml-->
+<view style='width:100%;height:100%;background:blue;overflow:hidden'>
+  <image style='width:60%;margin-left:20%;margin-top:40rpx;height:60rpx' src='../image/magicmirror/nochangetext.png'></image>
+  <p style='text-align:center;font-size:34rpx;margin-top:40rpx;color:#ffffff'> 要加油鸭 </p>
+
+  <image style='width:70%;margin-left:15%;margin-top:40rpx' src='../image/magicmirror/nochange.png'></image>
+
+  <div class='recomend-products'>
+    推荐产品
+  </div>
+    <div class='recomend-products-box-radar'  wx:for="{{recommendItem}}">
+          <image src="{{item.productsImg}}"></image>
+          <div>
+            <p> {{item.product}}</p>
+            <p> {{item.productDesc}} </p>
+            <p> {{item.price}}</p>
+          </div>
+        </div>
+</view>

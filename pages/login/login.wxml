@@ -1,0 +1,22 @@
+<!--pages/login/login.wxml-->
+<image src='../image/login/register.png' style='position:fixed;width:100%;height:100%'></image>
+<view class='shouji_info'>
+
+  <view class='info_list'>
+    <span>手机号码 </span>
+    <input placeholder='请输入手机号' bindinput="phoneInput" style='width:70%'></input>
+
+  </view>
+
+  <view class='info_list'>
+    <span>验证码 </span>
+    <input class='left' placeholder='验证码'></input>
+    <p class='yanzheng_btn' bindtap="bindButtonTap" disabled='{{disabled}}' > {{text}}</p>
+  </view>
+
+  <view class='info_list' style='border-bottom:none'>
+
+    <p class='shouquan_btn' > {{text}}</p>
+  </view>
+
+</view>

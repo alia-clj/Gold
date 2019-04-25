@@ -1,0 +1,44 @@
+<!--pages/youhuiquan/youhuiquan.wxml-->
+<view wx:if="{{userNo}}">
+  <div class='youhuquan-top'>
+    <image src='../image/center/bg-circle.png'></image>
+  </div>
+  <div class='youhuquan-center'>
+    <div class='youhuquan-center-item' wx:for="{{ quan }}" wx:key="{{index}}">
+      <image src='{{item.imgUrl}}'></image>
+      <div class='youhuquan-center-item-left'>
+        {{item.price}}
+      </div>
+      <div class='youhuquan-center-item-right'>
+        <p> {{item.text1}} </p>
+        <p> {{item.text2}} </p>
+        <p> {{item.text3}} </p>
+        <p> {{item.startTime}} 至 {{item.endTime}} </p>
+      </div>
+    </div>
+  </div>
+  <div class='recomend-products' style='color:#000000;margin-top:730rpx'>
+    推荐产品
+  </div>
+  <div class='recomend-products-box-radar' wx:for="{{recommendItem}}" wx:key="{{index}}">
+    <image src="{{item.productsImg}}"></image>
+    <div>
+      <p> {{item.product}}</p>
+      <p> {{item.productDesc}} </p>
+      <p style='color:#E41616'> {{item.price}}</p>
+    </div>
+  </div>
+</view>
+
+
+<view  wx:if="{{!userNo}}">
+  <div class='youhuquan-top'>
+    <image src='../image/center/bg-circle.png'></image>
+  </div>
+  <div class='youhuquan-no'>
+    <image src='../image/center/no.png'></image>
+
+    <p >这里空空如也</p>
+  </div>
+
+</view>

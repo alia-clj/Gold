@@ -1,0 +1,7 @@
+<!--pages/noTest/notest.wxml-->
+<view>
+   <P class='no-test-title'> 您还未测试过皮肤  </P>
+   <image  class='no-test-img'  src='../image/center/notest.png'></image>
+
+   <span class='go-test'> 前去测试 </span>
+</view>

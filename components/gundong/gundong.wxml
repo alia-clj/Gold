@@ -1,0 +1,12 @@
+<view class="container">
+  <view class='list' animation="{{animationData}}">
+    <view>
+<image class='go' src='/pages/image/qiandao/go.png'></image>
+
+    </view>
+    <view>
+<image class='go' src='/pages/image/qiandao/go.png'></image>
+     
+    </view>
+  </view>
+</view>

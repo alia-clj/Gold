@@ -1,0 +1,25 @@
+/* pages/dati/dati.wxss */
+
+.jidu {
+  position: fixed;
+  right: 0;
+  top: 100rpx;
+  border: 1rpx solid #fefefe;
+  width: 150rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 26rpx;
+  color: #17A7A9;
+  background: -webkit-linear-gradient(left top, #fff, #CCFFF7); /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(bottom right, #fff, #CCFFF7); /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(bottom right, #fff, #CCFFF7); /* Firefox 3.6 - 15 */
+  background: linear-gradient(to bottom right, #fff, #CCFFF7); /* 标准的语法（必须放在最后） */
+  border-top-left-radius: 36rpx;
+  border-bottom-left-radius: 36rpx;
+}
+
+.panta{
+  width:50%;height:60rpx;line-height:60rpx;position:absolute;left:25%;bottom:80rpx;background:#6151F1;text-align:center;color:#ffffff;font-size:30rpx;
+}
+

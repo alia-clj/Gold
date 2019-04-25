@@ -1,0 +1,29 @@
+<!--pages/btn/btn.wxml-->
+<button bindtap='changeColor'>修改颜色  </button>
+<button bindtap='pingfen'>评分  </button>
+<button bindtap='gundong'>滚动抽检  </button>
+<button bindtap='gundongchoujiang'>滚动抽检  </button>
+
+
+
+
+
+<button bindtap='secondTest'>secondTest  </button>
+<button bindtap='secondReportShare'>secondReportShare  </button>
+<button bindtap='reportShare'>reportShare  </button>
+<button bindtap='nochange'>nochange  </button>
+<button bindtap='dati'>dati  </button>
+
+<button bindtap='loading'>loading  </button>
+
+<button bindtap='login'>login  </button>
+<button bindtap='shouquan'>shouquan  </button>
+
+
+<button bindtap='shiyongreport'>试用报告  </button>
+
+<button bindtap='choujiangji'>choujiangji  </button>
+
+
+
+

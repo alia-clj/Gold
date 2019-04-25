@@ -1,0 +1,59 @@
+<!--pages/shiyongreport/shiyongreport.wxml-->
+
+<image style='position:fixed;width:100%;height:1800rpx' src='../image/shiyong/Samplesreportbackground.jpg'></image>
+<view style='position:relative;width:100%;height:1800rpx;'>
+  <div>
+    <p class='question'>{{question1}}</p>
+    <div class='anwser-box' catchtap='changeOil' class='{{num==index?"active":"anwser-box"}}' data-num='{{index}}' wx:for="{{children1}}" wx:key="{{index}}">{{item.anwser}} </div>
+  </div>
+
+  <div>
+    <p class='question'>{{question2}}</p>
+    <div class='anwser-box' catchtap='changeOil2' class='{{num2==index?"active":"anwser-box"}}' data-num='{{index}}' wx:for="{{children2}}" wx:key="{{index}}">{{item.anwser}} </div>
+  </div>
+<!-- 
+  <div>
+    <block wx:for="{{stars}}" wx:key="{{index}}" style='margin:0 auto;width:300rpx;height:100rpx;'>
+      <image class="star-image" src="{{key > item ? selectedSrc : normalSrc}}">
+        <view class="item" data-key="{{item+1}}" bindtap="selectRight">
+
+        </view>
+      </image>
+    </block>
+  </div> -->
+
+
+  <div style="overflow:hidden;">
+    <p class='question'>3.给这款妆可帖打个分吧</p>
+
+    <div  style='margin:0 auto;width:500rpx;height:100rpx;'>
+      <block wx:for="{{stars}}" wx:key="{{index}}" style='margin:0 auto;width:300rpx;height:100rpx;'>
+        <image class="star-image" src="{{key > item ? selectedSrc : normalSrc}}">
+          <view class="item" data-key="{{item+1}}" bindtap="selectRight">
+
+          </view>
+        </image>
+      </block>
+    </div>
+
+  </div>
+
+  <div style="overflow:hidden;">
+    <p class='question'> 4.你觉得小程序还有哪些可改进 的空间呢?写下来告诉我们吧。</p>
+    <view class="section">
+      <form bindsubmit="bindFormSubmit">
+        <view style='background-color:#ffffff;text-indent:20rpx'>
+          <textarea placeholder="form 中的 textarea" name="textarea" style='height:500rpx' />
+        </view>
+        <view>
+          <button class='submit-class' form-type="submit">提交</button>
+        </view>
+
+      </form>
+    </view>
+
+  </div>
+
+
+
+</view>

@@ -1,0 +1,13 @@
+<!--pages/mybag/mybag.wxml-->
+<image class='fixed-box' src='../image/qiandao/Sign-in-background.png'></image>
+  <div class='seeReport' > 合成 </div>
+
+<view>
+  <ul class='bag-box'>
+    <li wx:for="{{backItem}}" wx:key="index">
+      <image src='{{item.imgUrl}}'></image>
+      <p> {{item.desc}} </p>
+    </li>  
+  </ul>
+</view>
+

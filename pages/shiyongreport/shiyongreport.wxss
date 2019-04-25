@@ -1,0 +1,103 @@
+/* pages/shiyongreport/shiyongreport.wxss */
+
+.question {
+  font-size: 38rpx;
+  font-family: PingFang-SC-Bold;
+  text-align: left;
+  font-weight: bold;
+  color: rgba(254, 254, 254, 1);
+  margin-bottom: 40rpx;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.anwser-box {
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  background: #fff;
+  color: #018ce3;
+  margin: 40rpx auto;
+  text-align: center;
+  position: relative;
+}
+
+.active {
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  background: #018ce3;
+  color: #fff;
+  margin: 40rpx auto;
+  text-align: center;
+  position: relative;
+}
+
+.anwser-box-result {
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  background: #fff;
+  color: #96c5e2;
+  margin: 40rpx auto;
+  text-align: center;
+}
+
+.result {
+  background: #796bf3;
+  color: ffffff;
+}
+
+/* .result:nth-of-type(1) {
+  background: #2ae972;
+  color: #ffffff;
+} */
+
+/* .result:nth-of-type(2) {
+  background: #ff6f6f;
+   color: #ffffff;
+}
+
+.result:nth-of-type(3) {
+  background: #fff;
+  color: #018ce3;
+} */
+
+.section {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.submit-class {
+  margin: 40rpx 0;
+  background-color: #6151f0;
+  width: 60%;
+  margin-left: 20%;
+  color: #fff;
+}
+
+.smile-img-box {
+  width: 40rpx;
+  height: 40rpx;
+  float: left;
+  margin-right: 20rpx;
+}
+
+.star-image {
+  position: relative;
+  width: 80rpx;
+  height: 80rpx;
+  margin-right:20rpx;
+
+}
+
+.item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80rpx;
+  height: 80rpx;
+}

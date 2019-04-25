@@ -1,0 +1,55 @@
+/* pages/mybag/mybag.wxss */
+
+.fixed-box {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.bag-box {
+  width: 80%;
+  height: 900rpx;
+  position: fixed;
+  z-index: 10;
+  top: 100rpx;
+  left: 10%;
+  border-radius: 20rpx;
+  background-color: #FFFBE8;
+  -moz-box-shadow: 1px 1px 12px #888; /* 老的 Firefox */
+  box-shadow: 1px 1px 12px #888;
+}
+
+.bag-box>li{
+ width:36%;
+height:370rpx;
+float:left;
+margin:50rpx 0 0 50rpx;
+}
+.bag-box>li:nth-of-type(2n){
+  margin-left: 30rpx
+}
+.bag-box>li:nth-of-type(2n+1){
+  margin-right: 30rpx
+}
+.bag-box>li>image{
+  width: 100%;
+  height: 330rpx;
+}
+.bag-box>li>p{
+ text-align: center;
+ color: black;
+}
+
+.seeReport {
+  width: 301rpx;
+  height: 71rpx;
+  line-height: 70rpx;
+  color: #fff;
+  background: #6151f1;
+  position: fixed;
+  bottom: 70rpx;
+  left: calc(50% - 150rpx);
+  text-align: center;
+  z-index: 99
+}

@@ -1,0 +1,149 @@
+<!--pages/modal/modal.wxml-->
+<!--custom Modal-->
+<div class='anwser-box-result' bindtap='opemZhongDuan'>打开中断答题</div>
+
+<div class='anwser-box-result' bindtap='yiDaTi'>已答过题</div>
+
+<div class='anwser-box-result' bindtap='yiDaTiFail'>答题失败</div>
+
+<div class='anwser-box-result' bindtap='success'>胜利</div>
+
+<div class='anwser-box-result' bindtap='shareSuccess'>分享胜利</div>
+
+<div class='anwser-box-result' bindtap='shareSave'>分享胜利保存弹框</div>
+
+<div class='anwser-box-result' bindtap='allFail'>一题都没对</div>
+
+<div class='anwser-box-result' bindtap='shareFail'>分享失败</div>
+
+<div class='anwser-box-result' bindtap='share'>分享成功</div>
+
+
+
+
+<view class="modal-mask" bindtap="hideModal" wx:if="{{showModal}}"></view>
+<view wx:if="{{showModal}}">
+  <!-- 中断答题内容 -->
+  <view class="modal-content" wx:if="{{zhongduandati}}">
+    <view class='test-box'>
+      <image src='../image/dati/zhongduan.png'></image>
+      <p class='test-box-p'> 你真的不想做大神了吗？ </p>
+      <p class='test-box-p'> 继续答题 </p>
+      <p class='test-box-p'> 赢取试用装和积分哦！ </p>
+    </view>
+    <div class='btn-box' style=" border:1rpx solid #ffff;" bindtap='closeModal'>是的</div>
+    <div class='btn-box' style='  top: 800rpx;  background:  #6151F1;'>手滑点错</div>
+    <image bindtap='closeModal' class='close-icon' src='../image/magicmirror/close.png'></image>
+  </view>
+  <!-- 已答题内容 -->
+  <view class="modal-content" wx:if="{{yidaguoti}}">
+    <div class='dati-title'>倔强青铜</div>
+    <view class='test-box' style='top:440rpx'>
+      <image src='../image/dati/yidati.png'></image>
+      <p class='test-box-p'> 今日已参加过答题 </p>
+      <p class='test-box-p'> 请明日再来！ </p>
+      <image bindtap='closeModal' style='top:400rpx;left:calc(50% - 30rpx);width:60rpx;height:60rpx' src='../image/magicmirror/close.png'></image>
+    </view>
+  </view>
+
+  <!-- 答题失败内容 -->
+  <view class="modal-content" wx:if="{{datifail}}">
+    <div class='dati-title'>答题失败</div>
+    <p class='test-box-p' style='top:80rpx;left:0'> 请明日再来！ </p>
+    <view class='test-box' style='top:440rpx'>
+      <image src='../image/dati/datifail.png' style='top:-170rpx'></image>
+    </view>
+    <div class='btn-box' style=";top:780rpx" bindtap='closeModal'>查看结果</div>
+  </view>
+
+  <!-- 胜利内容 -->
+  <view class="modal-content" wx:if="{{success}}">
+    <div class='dati-title'>恭喜你! 答对了 {{num}} 题!</div>
+    <p class='test-box-p' style='top:80rpx;left:0'> 获得积分{{jifen}} 分</p>
+    <view class='test-box' style='top:440rpx'>
+      <image src='../image/dati/zuanshi.png' style='top:-170rpx'></image>
+    </view>
+    <div class='btn-box' style="top:700rpx">荣耀钻石</div>
+
+    <div class='btn-box' style=" border:1rpx solid #ffff;top:780rpx" bindtap='closeModal'>申请试用装</div>
+    <div class='btn-box' style='  top: 880rpx;  background:  #6151F1;'>分享到群积分翻倍</div>
+  </view>
+
+  <!-- 分享胜利内容 -->
+  <view class="modal-content" wx:if="{{shareSuccess}}">
+    <div class='btn-box' style="top:0">荣耀钻石</div>
+    <view class='test-box' style='top:440rpx'>
+      <image src='../image/dati/zuanshibig.png' style='top:-320rpx'></image>
+      <p class='test-box-p' style='top:300rpx;color:#F28B49;font-size:44rpx'> 太厉害了! 今天连对{{num}}题! </p>
+      <p class='test-box-p' style='top:360rpx'> 坐等你来挑战! </p>
+      <p class='test-box-p' style='top:420rpx'> 还能赢取试用装礼品哦~ </p>
+    </view>
+
+    <div class='baocun' bindtap='closeModal'>保存战绩</div>
+    <div class='hupeng'>分享到群积分翻倍</div>
+  </view>
+  <div class='footer' wx:if="{{shareSuccess}}">
+    <image class='girls-bottom' src='../image/magicmirror/girls.png'></image>
+    <span class='user-name'> 娃哈哈十个小的房间 </span>
+    <image class='girls-bottom' style='float:right' src='../image/magicmirror/girls.png'></image>
+    <span class='user-name' style='float:right;width:100rpx;font-size:26rpx'> 长按扫码 或搜索小程序 上帝研究所 </span>
+  </div>
+
+  <!-- 分享胜利弹框内容 -->
+  <view class="modal-content" wx:if="{{shareSave}}">
+    <div class='dati-title'>恭喜你! 答对了 {{num}} 题!</div>
+    <p class='test-box-p' style='top:80rpx;left:0'> 获得积分{{jifen}} 分</p>
+    <view class='test-box' style='top:440rpx'>
+      <image src='../image/dati/zuanshi.png' style='top:-170rpx'></image>
+    </view>
+    <div class='btn-box' style="top:700rpx">荣耀钻石</div>
+
+    <div class='btn-box' style=" border:1rpx solid #ffff;top:780rpx" bindtap='closeModal'>申请试用装</div>
+    <div class='btn-box' style='  top: 880rpx;  background:  #6151F1;'>分享到群积分翻倍</div>
+  </view>
+
+  <!-- 一题都没答对内容 -->
+  <view class="modal-content" wx:if="{{allFail}}">
+    <div class='dati-title'>哎哟! 一题都没有答对</div>
+    <p class='test-box-p' style='top:90rpx;left:0;font-family: PingFang-SC-Regular'>上帝是派你来捣乱的吗？</p>
+    <p class='test-box-p' style='top:140rpx;left:0;font-family:PingFang-SC-Medium'>没有获得积分</p>
+    <p class='test-box-p' style='top:200rpx;left:0;font-size:34rpx;font-family:                         PingFang-SC-Regular'>明天要加油哦~你永远是胖胖棒棒哒！</p>
+
+    <view class='test-box' style='top:440rpx'>
+      <image src='../image/dati/allfail.png' style='top:-10rpx;height:440rpx'></image>
+    </view>
+    <div class='btn-box' style='  top: 780rpx;  background:  #6151F1;'>呼朋唤友来答题</div>
+    <div class='btn-box' style=" border:1rpx solid #ffff;top:870rpx" bindtap='closeModal'>默默接受</div>
+
+  </view>
+
+  <!-- 分享失败内容 -->
+  <view class="modal-content" wx:if="{{shareFail}}">
+    <view class='test-box' style='top:440rpx'>
+      <image src='../image/dati/shareFail.png' style='top:-320rpx'></image>
+      <p class='test-box-p' style='top:300rpx;color:#A7C2D4;font-size:44rpx'> 上帝请来的逗比就是我 </p>
+      <p class='test-box-p' style='top:360rpx'> 你倒是来试试鸭！! </p>
+      <p class='test-box-p' style='top:420rpx'> 还能赢取试用装礼品哦~ </p>
+    </view>
+
+    <div class='baocun' bindtap='closeModal'>保存战绩</div>
+    <div class='hupeng'>分享到群</div>
+  </view>
+  <div class='footer' wx:if="{{shareFail}}">
+    <image class='girls-bottom' src='../image/magicmirror/girls.png'></image>
+    <span class='user-name'> 娃哈哈十个小的房间 </span>
+    <image class='girls-bottom' style='float:right' src='../image/magicmirror/girls.png'></image>
+    <span class='user-name' style='float:right;width:100rpx;font-size:26rpx'> 长按扫码 或搜索小程序 上帝研究所 </span>
+  </div>
+
+  <!-- 分享成功内容 -->
+  <div class='footer' style='height:500rpx' wx:if="{{share}}">
+    <span style='float:right;width:80rpx;font-size:70rpx;display:block;' bindtap='hideModal'> × </span>
+    <image style='position:absolute;top:-240rpx;width:460rpx;left:calc(50% - 230rpx);' src='../image/dati/shareSuccess.png'></image>
+
+    <p style='margin-top:210rpx;color:#000;text-align:center;'>分享成功</p>
+    <p style='margin-top:10rpx;color:#000;text-align:center;font-weight:bold;font-size:36rpx'>获得积分 240 分 </p>
+    <div style='width:300rpx;margin-left:calc(50% - 150rpx) ;margin-top:20rpx; background:  #6151F1;text-align:center;color:#ffffff;height:70rpx;line-height:70rpx;'>申请试用装</div>
+
+  </div>
+</view>

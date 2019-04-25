@@ -1,0 +1,268 @@
+<!--pages/shiyong/shiyong.wxml-->
+<image src='../image/shiyong/shiyongBg.jpg' style="width:100%;height:100%;position:fixed;top:0;left:0"></image>
+<view style='width:100%;height:100%;position:fixed'>
+  <swiper autoplay="{{false}}" current="{{swiper.current}}" bindchange="swiperChange" style='margin-top:0rpx;width:100%;height:100%;box-sizing:border-box;'>
+    <block wx:for="{{swiper.swiperItem}}" wx:key="{{index}}">
+      <swiper-item>
+        <div class='title-div'>
+          <p> 本期试用装 </p>
+          <p> 精致修护妆可帖眼膜</p>
+          <image src='../image/3.png'></image>
+        </div>
+        <div class='text-div'>
+          <span></span>
+          <p style='color:#000000;font-size:32rpx;text-align:center;line-height:70rpx'> 潘达修护文可贴眼膜贴 </p>
+          <p> 10片装淡化黑眼圈眼袋细纹提拉紧致神修护，击退眼纹，双重保湿能量，舒适凝胶质地，日本进口莫不 </p>
+        </div>
+        <div>
+          <p style='width:280rpx;height:70rpx;line-height:70rpx;background:#6151F1;margin:40rpx auto;text-align:center;'>去申请</p>
+
+          <p style='width:280rpx;height:70rpx;line-height:70rpx;background:#6151F1;margin:40rpx auto;text-align:center;' bindtap='goModal'>打开弹框</p>
+
+        </div>
+      </swiper-item>
+    </block>
+  </swiper>
+  <image src="{{leftArrow}}" bindtap='preBtn' class='changeStep'></image>
+  <image src="{{rightArrow}}" bindtap='nextBtn' class='changeStep'></image>
+</view>
+
+
+<view style='width:100%;height:900rpx;position:fixed;z-index:999；overflow:scroll;'>
+
+  <div class='anwser-box-result' bindtap='shenqingshiyongzhuang'>去申请试用装</div>
+
+  <div class='anwser-box-result' bindtap='lessTirty'>30分以下</div>
+
+  <div class='anwser-box-result' bindtap='firstDati'>先答题</div>
+
+  <div class='anwser-box-result' bindtap='moreEighty'>80分以上</div>
+
+  <div class='anwser-box-result' bindtap='afterShenqing'>申请试用后</div>
+
+  <div class='anwser-box-result' bindtap='unEndReport'>还有未完成的试用</div>
+
+  <div class='anwser-box-result' bindtap='yiShenQing'>已申请</div>
+
+  <div class='anwser-box-result' bindtap='zailai'>已申请再申请</div>
+
+  <div class='anwser-box-result' bindtap='weidao'>weidao</div>
+  <div class='anwser-box-result' bindtap='yiShenQingJiDong'>好激动</div>
+
+  <div class='anwser-box-result' bindtap='tiaokuan'>阅读条款</div>
+
+  <div class='anwser-box-result' bindtap='shenqingchenggong'>shenqingchenggong</div>
+  <div class='anwser-box-result' bindtap='yilingwan'>yilingwan</div>
+
+
+
+
+
+  <view class="modal-mask" bindtap="hideModal" wx:if="{{showModal}}"></view>
+  <view wx:if="{{showModal}}">
+    <!-- 申请试用装 -->
+    <view class="modal-content" wx:if="{{shenqingshiyongzhuang}}"  style=' width: 500rpx;'>
+      <p class='test-box-p'> 棒棒哒 </p>
+      <p class='test-box-p'> 答题成绩 {{grade}}分 </p>
+      <view class='test-box'>
+        <image style='-80rpx' src='../image/shiyong/datichengji.png'></image>
+      </view>
+      <div class='btn-box' style=" border:1rpx solid #ffff;" bindtap='closeModal'>去申请试用装</div>
+    </view>
+    <!-- 答题30分以下弹框内容 -->
+    <view class="modal-content" wx:if="{{lessTirty}}"  style=' width: 500rpx;'>
+      <p class='test-box-p' style=' background: -webkit-gradient(linear, left top, left bottom, from(#F8FAFB), to(#88AFC0));  -webkit-background-clip: text;  -webkit-text-fill-color: transparent;'> 哎呦！ </p>
+      <p class='test-box-p'> 答题成绩 {{grade}} 分</p>
+      <p class='test-box-p'>请明日参与答题 </p>
+      <p class='test-box-p'> 超过30分就可以申请了哦 </p>
+      <view class='test-box'>
+        <image style='top:20rpx;height:540rpx' src='../image/shiyong/less30.png'></image>
+      </view>
+      <div class='btn-box' style=" border:1rpx solid #ffff;" bindtap='closeModal'>我知道啦</div>
+    </view>
+
+    <!-- 先答题再申请 -->
+    <view class="modal-content" wx:if="{{firstDati}}" style=' width: 500rpx;'>
+      <p class='test-box-p' style=' background: -webkit-gradient(linear, left top, left bottom, from(#B9B2FB), to(#8275FB));  -webkit-background-clip: text;  -webkit-text-fill-color: transparent;'> 先答题 再申请 </p>
+      <p class='test-box-p'> 今日还未参加过答题</p>
+      <p class='test-box-p'> 超过30分就可以申请了哦 </p>
+      <view class='test-box'>
+        <image style='top:20rpx;height:540rpx' src='../image/shiyong/weidati.png'></image>
+      </view>
+      <div class='btn-box' style=" border:1rpx solid #ffff;" bindtap='closeModal'>去答题</div>
+    </view>
+
+
+    <!--80分以上提vip身份 -->
+    <view class="modal-content" wx:if="{{moreEighty}}"  style=' width: 500rpx;'>
+      <p class='test-box-p' style=' background: -webkit-gradient(linear, left top, left bottom, from(#F4C438), to(#FDA40D));  -webkit-background-clip: text;  -webkit-text-fill-color: transparent;'> 恭喜你！ </p>
+      <p class='test-box-p' style=' background: -webkit-gradient(linear, left top, left bottom, from(#F4C438), to(#FDA40D));  -webkit-background-clip: text;  -webkit-text-fill-color: transparent;font-weight:bold'> 喜提VIP身份</p>
+      <p class='test-box-p'>答题成绩 {{grade}} </p>
+      <view class='test-box'>
+        <image style='top:-30rpx;height:540rpx' src='../image/shiyong/vip.png'></image>
+      </view>
+      <p class='test-box-p' style='top:740rpx'>无需申请！进入抢试用装绿色通道 </p>
+      <div class='btn-box' style=" border:1rpx solid #ffff;" bindtap='closeModal'>去抢试用装</div>
+    </view>
+
+    <!-- 申请试用后 -->
+    <view class="modal-content" wx:if="{{afterShenqing}}" style='padding:0;'>
+      <view class='modal-content-box' style='background:#ffffff;height:560rpx;border-radius:20rpx;top:20%'>
+
+        <p class='modal-p' style='font-size:38rpx;font-weight:bold;margin-top:120rpx'>申请试用后</p>
+        <p class='modal-p' style='font-size:38rpx;font-weight:bold;'>需要填写试用反馈哦</p>
+        <p class='modal-p' style='font-size:30rpx;margin-top:20rpx;'>否则将会影响下一次的申请试用</p>
+        <p class='modal-p' style='font-size:30rpx;'>申请成功5天后才可以填写试用报告</p>
+        <p class='modal-p' style='font-size:30rpx;font-weight:bold;margin-top:20rpx;'>还有积分奖励哦！</p>
+        <p class='modal-p' style='font-size:36rpx;color:#ffffff;background:#6151F0;width:400rpx;height:60rpx;line-height:60rpx;margin:40rpx auto' bindtap='closeModal'>我知道啦</p>
+      </view>
+    </view>
+    
+        <image class='modal-img'  wx:if="{{afterShenqing}}" src='../image/shiyong/shenqingshiyong.png'></image>
+    <image bindtap='closeModal' wx:if="{{afterShenqing}}" style='position:fixed;bottom:200rpx;left:calc(50% - 30rpx);z-index:9999;width:60rpx;height:60rpx' src='../image/magicmirror/close.png'></image>
+
+
+    <!-- 还有未完成的试用报告 -->
+    <view class="modal-content" wx:if="{{unEndReport}}" style='padding:0;'>
+      <view class='modal-content-box' style='background:#ffffff;border-radius:20rpx;top:20%'>
+
+      
+        <p class='modal-p' style='font-size:38rpx;font-weight:bold;margin-top:120rpx'>还有未完成的试用报告</p>
+        <p class='modal-p' style='font-size:30rpx;margin-top:20rpx;'>请先去填写未完成的试用报告再来申请</p>
+        <p class='modal-p' style='font-size:30rpx;font-weight:bold;margin-top:20rpx;'>还有积分奖励哦！</p>
+        <p class='modal-p' style='font-size:36rpx;color:#ffffff;background:#6151F0;width:400rpx;height:60rpx;line-height:60rpx;margin:40rpx auto' bindtap='closeModal'>去填写</p>
+      </view>
+    </view>
+      <image class='modal-img'  wx:if="{{unEndReport}}" style='width:300rpx;height:220rpx;top:110rpx;left:calc(50% - 150rpx);' src='../image/shiyong/weiwanchengshiyongreport.png'></image>
+    <image bindtap='closeModal' wx:if="{{unEndReport}}" style='position:fixed;bottom:200rpx;left:calc(50% - 30rpx);z-index:9999;width:60rpx;height:60rpx' src='../image/magicmirror/close.png'></image>
+
+    <!-- 您已申请试用装 -->
+    <view class="modal-content" wx:if="{{yiShenQing}}" style='padding:0;'>
+      <view class='modal-content-box' style='background:#ffffff;border-radius:20rpx;top:300rpx'>
+     
+        <p class='modal-p' style='font-size:38rpx;font-weight:bold;margin-top:120rpx'>您已申请试用装</p>
+        <p class='modal-p' style='font-size:30rpx;margin:40rpx;'>敬请期待申请结果</p>
+        <p class='modal-p' style='font-size:36rpx;color:#ffffff;background:#6151F0;width:400rpx;height:60rpx;line-height:60rpx;margin:80rpx auto' bindtap='closeModal'>查看申请进度</p>
+      </view>
+    </view>
+       <image class='modal-img' wx:if="{{yiShenQing}}"  style='width:300rpx;height:300rpx;top:120rpx;left:calc(50% - 150rpx);' src='../image/shiyong/shenqingzhong.png'></image>
+    <image bindtap='closeModal' wx:if="{{yiShenQing}}" style='position:fixed;bottom:200rpx;left:calc(50% - 30rpx);z-index:9999;width:60rpx;height:60rpx' src='../image/magicmirror/close.png'></image>
+
+    <!-- 您已申请次月再来 -->
+    <view class="modal-content" wx:if="{{zailai}}" style='padding:0;'>
+      <view class='modal-content-box' style='background:#ffffff;border-radius:20rpx;top:300rpx'>
+       
+        <p class='modal-p' style='font-size:42rpx;font-weight:bold;margin-top:160rpx'>您已申请试用装</p>
+        <p class='modal-p' style='font-size:30rpx;margin:40rpx;'>请次月再来</p>
+      </view>
+    </view>
+     <image class='modal-img'  wx:if="{{zailai}}" style='width:300rpx;height:300rpx;top:120rpx;left:calc(50% - 150rpx);' src='../image/shiyong/wanchengshenqing.png'></image>
+    <image bindtap='closeModal' wx:if="{{zailai}}" style='position:fixed;bottom:200rpx;left:calc(50% - 30rpx);z-index:9999;width:60rpx;height:60rpx' src='../image/magicmirror/close.png'></image>
+
+    <!-- 时间还未到哦 -->
+    <view class="modal-content" wx:if="{{weidao}}" style='padding:0;'>
+      <view class='modal-content-box' style='background:#ffffff;border-radius:20rpx;top:300rpx'>
+      
+        <p class='modal-p' style='font-size:42rpx;font-weight:bold;margin-top:160rpx'>时间还未到哦</p>
+        <p class='modal-p' style='font-size:30rpx;margin:10rpx;'>收到试用后5天才可以填写报告</p>
+        <p class='modal-p' style='font-size:30rpx;font-weight:bold;margin-top:20rpx;'>不要太着急</p>
+        <p class='modal-p' style='font-size:30rpx;font-weight:bold;margin:0 0 40rpx 0;'>连续使用效果会不一样</p>
+      </view>
+    </view>
+      <image class='modal-img' wx:if="{{weidao}}" style='width:500rpx;height:300rpx;top:120rpx;left:calc(50% -250rpx);' src='../image/shiyong/5day.png'></image>
+    <image bindtap='closeModal' wx:if="{{weidao}}" style='position:fixed;bottom:200rpx;left:calc(50% - 30rpx);z-index:9999;width:60rpx;height:60rpx' src='../image/magicmirror/close.png'></image>
+
+    <!-- 您已申请好激动 -->
+    <view class="modal-content" wx:if="{{yiShenQingJiDong}}" style='padding:0;'>
+      <view class='modal-content-box' style='background:#ffffff;border-radius:20rpx;top:240rpx'>
+      
+        <p class='modal-p' style='font-size:38rpx;font-weight:bold;margin-top:120rpx'>已申请</p>
+        <p class='modal-p' style='font-size:38rpx;font-weight:bold'>想想就好激动呢</p>
+
+        <p class='modal-p' style='font-size:30rpx;margin-top:20rpx;'>我们会在1-3个工作日</p>
+        <p class='modal-p' style='font-size:30rpx;'>将申请成功的结果以微信的方式通知</p>
+        <p class='modal-p' style='font-size:30rpx;font-weight:bold;margin:20rpx 0 0 0;'>若申请失败奖励100积分</p>
+        <p class='modal-p' style='font-size:30rpx;font-weight:bold'>若申请成功记得要来写试用报告哦</p>
+        <p class='modal-p' style='font-size:30rpx;font-weight:bold'>奖励50积分</p>
+        <p class='modal-p' style='font-size:36rpx;color:#ffffff;background:#6151F0;width:400rpx;height:60rpx;line-height:60rpx;margin:30rpx auto;' bindtap='closeModal'>敬请期待</p>
+      </view>
+    </view>
+      <image class='modal-img' wx:if="{{yiShenQingJiDong}}" style='width:300rpx;height:300rpx;top:40rpx;left:calc(50% - 150rpx);' src='../image/shiyong/shenqingzhong.png'></image>
+    <image bindtap='closeModal' wx:if="{{yiShenQingJiDong}}" style='position:fixed;bottom:200rpx;left:calc(50% - 30rpx);z-index:9999;width:60rpx;height:60rpx' src='../image/magicmirror/close.png'></image>
+
+    <!-- 试用阅读条款 -->
+    <view class="modal-content" wx:if="{{tiaokuan}}" style='padding:0;height:1000rpx'>
+      <view class='modal-content-box' style='background:#ffffff;border-radius:20rpx;top:160rpx'>
+       
+        <p class='modal-p' style='font-size:38rpx;font-weight:bold;margin-top:120rpx'>试用阅读条款</p>
+        <p class='modal-p' style='font-size:32rpx;height:600rpx;overflow:scroll;margin:20rpx 30rpx 0 30rpx'>在使用本款小程序所有功能之前， 请您务必仔细阅读该试用条款，确认同意条款后，您的使用行为将被视为对该声明的认可。我方小程序尊重并请您务必仔细阅读该试用条款，确认同意条款后，您的使用行为将被视为对该声明的认可。我方小程序尊重并请您务必仔细阅读该试用条款，确认同意条款后，您的使用行为将被视为对该声明的认可。我方小程序尊重并请您务必仔细阅读该试用条款，确认同意条款后，您的使用行为将被视为对该声明的认可。我方小程序尊重并请您务必仔细阅读该试用条款，确认同意条款后，您的使用行为将被视为对该声明的认可。我方小程序尊重并请您务必仔细阅读该试用条款，确认同意条款后，您的使用行为将被视为对该声明的认可。我方小程序尊重并
+        </p>
+        <p class='modal-p' style='width:100%;height:80rpx;line-height:60rpx;margin:37rpx 0;' bindtap='closeModal'>
+          <p style='font-size:36rpx;color:#6151F0;border:1rpx solid #000000;width:40%;height:80rpx;line-height:80rpx;margin-left:8%;float:left' bindtap='closeModal'>
+            不同意
+          </p>
+          <p class='modal-p' style='width:40%;color:#ffffff;height:80rpx;line-height:80rpx;background:#6151F0;margin-right:8%;float:right' bindtap='openHaojidong'>
+            同意
+          </p>
+        </p>
+      </view>
+    </view>
+     <image class='modal-img' wx:if="{{tiaokuan}}" style='width:200rpx;height:300rpx;top:10rpx;left:calc(50% - 100rpx);' src='../image/shiyong/2.png'></image>
+    <image bindtap='closeModal' wx:if="{{tiaokuan}}" style='position:fixed;bottom:200rpx;left:calc(50% - 30rpx);z-index:9999;width:60rpx;height:60rpx' src='../image/magicmirror/close.png'></image>
+
+    <!-- 申请成功！ -->
+    <view class="modal-content" wx:if="{{shenqingchenggong}}" style='padding:0;height:1000rpx'>
+      <view class='modal-content-box' style='background:#ffffff;border-radius:20rpx;top:160rpx'>
+   
+        <p class='modal-p' style='font-size:42rpx;font-weight:bold;margin-top:120rpx'>申请成功！</p>
+        <p class='modal-p' style='font-size:30rpx;margin:0 30rpx;padding:10rpx 0;border-bottom:1rpx dotted black'>请确认地址</p>
+        <p class='modal-p' style='overflow:hidden;font-size:30rpx;margin:0 30rpx;padding:10rpx 0;border-bottom:1rpx dotted black'>
+          <span style='width:200rpx;height:60rpx;line-height:60rpx;float:left;display:inline-block;text-align:left'> {{name}} </span>
+          <span style='width:200rpx;height:60rpx;line-height:60rpx;float:right;display:inline-block;'> {{tel}} </span>
+          <span style='width:100%;height:100rpx;line-h  eight:60rpx;float:left;display:inline-block;text-align:left'> {{address}} </span>
+          <button bindtap='login'>login </button>
+        </p>
+        <p class='modal-p' style='font-size:30rpx;margin:0 30rpx;padding:20rpx 0'>我们会在5-7个工日安排发货</p>
+        <p class='modal-p' style='font-size:30rpx;font-weight:bold;margin-top:20rpx;'>记得收货后写试用报告</p>
+        <p class='modal-p' style='font-size:30rpx;font-weight:bold;margin:0 0 40rpx 0;'> 有积分奖励哦！</p>
+
+        <p class='modal-p' style='width:100%;height:180rpx;line-height:60rpx;margin:37rpx 0;' bindtap='closeModal'>
+          <p style='font-size:36rpx;color:#6151F0;border:1rpx solid #000000;width:40%;height:80rpx;line-height:80rpx;margin-left:8%;float:left' bindtap='closeModal'>
+            不同意
+          </p>
+          <p class='modal-p' style='width:40%;color:#ffffff;height:80rpx;line-height:80rpx;background:#6151F0;margin-right:8%;float:right' bindtap='closeModal'>
+            同意
+          </p>
+        </p>
+      </view>
+    </view>
+         <image class='modal-img' wx:if="{{shenqingchenggong}}"  style='width:200rpx;height:200rpx;top:60rpx;left:calc(50% - 100rpx);' src='../image/shiyong/shenqingzhong.png'></image>
+    <image bindtap='closeModal' wx:if="{{shenqingchenggong}}" style='position:fixed;bottom:10rpx;left:calc(50% - 30rpx);z-index:9999;width:60rpx;height:60rpx' src='../image/magicmirror/close.png'></image>
+
+    <!-- 试用装已领完 -->
+    <view class="modal-content" wx:if="{{yilingwan}}" style='padding:0;'>
+      <view class='modal-content-box' style='background:#ffffff;border-radius:20rpx;top:300rpx'>
+       
+        <p class='modal-p' style='font-size:36rpx;font-weight:bold;margin-top:120rpx'>哎哟！</p>
+        <p class='modal-p' style='font-size:40rpx;font-weight:bold;margin:10rpx'>试用装已领完</p>
+        <p class='modal-p' style='font-size:34rpx;margin:20rpx'>下次请赶早哦</p>
+        <p class='modal-p' style='font-size:36rpx;color:#ffffff;background:#6151F0;width:400rpx;height:60rpx;line-height:60rpx;margin:80rpx auto' bindtap='closeModal'>我知道啦</p>
+      </view>
+    </view>
+     <image class='modal-img' wx:if="{{yilingwan}}"  style='width:300rpx;height:300rpx;top:120rpx;left:calc(50% - 150rpx);' src='../image/shiyong/yilingwan.png'></image>
+    <image bindtap='closeModal' wx:if="{{yilingwan}}" style='position:fixed;bottom:200rpx;left:calc(50% - 30rpx);z-index:9999;width:60rpx;height:60rpx' src='../image/magicmirror/close.png'></image>
+
+    <!-- 试用报告完成后弹框 -->
+    <div class='footer' style='height:400rpx' wx:if="{{complete}}">
+      <span style='float:right;width:80rpx;font-size:70rpx;display:block;' bindtap='hideModal'> × </span>
+      <image style='position:absolute;top:-240rpx;width:460rpx;left:calc(50% - 230rpx);' src='../image/shiyong/end.png'></image>
+
+      <p style='margin-top:210rpx;color:#000;text-align:center;'>感谢您的参与</p>
+      <p style='margin-top:10rpx;color:#000;text-align:center;font-weight:bold;font-size:36rpx'>奖励积分 50 分 </p>
+
+    </div>
+  </view>
+
+
+
+</view>

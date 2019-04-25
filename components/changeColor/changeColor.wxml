@@ -1,0 +1,12 @@
+
+<!-- 循环情况点击改变颜色 -->
+<view class='oil_s'>
+  <view  catchtap='changeOil'   wx:for="{{oilName}}" wx:key="{{index}}" class='{{num==index?"active":""}}' data-num='{{index}}'>{{ item.name}}</view>
+
+</view>
+
+<view class='oil_s'>
+  <view class='{{num==1?"active":""}}' data-num='1' catchtap='changeOil'>92#汽油</view>
+  <view class='{{num==2?"active":""}}' data-num='2' catchtap='changeOil'>95#汽油</view>
+  <view class='{{num==3?"active":""}}' data-num='3' catchtap='changeOil'>0#汽油</view>
+</view>
